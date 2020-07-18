@@ -22,9 +22,8 @@ elif PO in pizzaOptions:
     while  thisOrder == 1:
         print("""
         Toppings available are:
-        1. Pepperoni            2. Mushroom
-        3. Green Pepper         3. Cheese
-        4. Extra Chees
+        1. Pepperoni            2. Mushroom         3. Green Pepper
+        4. Cheese               5. Extra Chees
         """)
         PT = input("Enter Toppings (enter Q to quite) : ").lower()
         if PT == "q":
@@ -32,13 +31,12 @@ elif PO in pizzaOptions:
             break
         elif PT in pizzaToppings:
             toppings.append(PT)
+            print(PT.title(), " is added to your pizza")
         else:
-            print(f"{PT} is not available")
+            print(f"{PT.title()} is not available")
 else:
     print("The said is not in options")
 
-print(f"""
-        YOur Order is a {order[0].title()} pizza with following toppings: 
-        """)
+print(f"\tYour Order is a {order[0].title()} pizza with following toppings: ")
 for a in toppings:
     print(f"\t{a.title()}")
