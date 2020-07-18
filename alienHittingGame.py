@@ -36,6 +36,10 @@ while c == True:
         break
 if score[0] < y:
     score.insert(0, y)
+elif score[1] < y:
+    score.insert(1, y)
+elif score[2] < y:
+    score.insert(2, y)
 print(f"""
     Top high scores are :
     {score[0]}
